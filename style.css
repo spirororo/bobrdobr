@@ -1,0 +1,99 @@
+/* Общие стили для страницы */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 40px 0; /* Добавлены отступы сверху и снизу */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Чтобы карточка не прилипала к низу */
+    min-height: 100vh;
+}
+
+/* Стили для карточки */
+.card {
+    width: 300px;
+    background-color: #fff;
+    border: 2px solid #d2bf13;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Заголовок и имя супергероя */
+.hero-header h1 {
+    font-size: 24px;
+    color: #996900;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.hero-header .name {
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.hero-header .title {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Заголовок для секций */
+h2 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Стили для контактной информации */
+.contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact ul li {
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Стили для суперспособностей */
+.abilities ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.abilities ul li {
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Изображение персонажа */
+.image img {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Ограничение высоты изображения */
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+/* Стили для футера */
+footer {
+    font-size: 14px;
+    color: #888;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Стили для общей структуры */
+section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
