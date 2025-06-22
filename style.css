@@ -1,34 +1,36 @@
-/* Общие стили для страницы */
+/* Общие стили */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     margin: 0;
-    padding: 40px 0; /* Добавлены отступы сверху и снизу */
+    padding: 40px 0;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Чтобы карточка не прилипала к низу */
+    align-items: flex-start;
     min-height: 100vh;
 }
 
-/* Стили для карточки */
 .card {
-    width: 300px;
+    width: 320px;
     background-color: #fff;
     border: 2px solid #d2bf13;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     padding: 20px;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px;
+    transition: transform 0.3s ease;
 }
 
-/* Заголовок и имя супергероя */
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Заголовок */
 .hero-header h1 {
     font-size: 24px;
     color: #996900;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .hero-header .name {
@@ -41,59 +43,160 @@ body {
     color: #666;
 }
 
-/* Заголовок для секций */
+/* Навигационное меню */
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #996900;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+.nav-menu ul li a:hover {
+    background-color: #d2bf13;
+    color: #000;
+}
+
+/* Заголовки секций */
 h2 {
     font-size: 20px;
     color: #333;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin: 20px 0 10px;
 }
 
-/* Стили для контактной информации */
-.contact ul {
+/* Списки */
+ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.contact ul li {
-    margin: 5px 0;
+ul li {
+    margin: 6px 0;
     color: #333;
 }
 
-/* Стили для суперспособностей */
-.abilities ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.abilities ul li {
-    margin: 5px 0;
-    color: #333;
-}
-
-/* Изображение персонажа */
-.image img {
+/* Изображение */
+.image img,
+.gallery img {
     width: 100%;
     height: auto;
-    max-height: 300px; /* Ограничение высоты изображения */
     border-radius: 5px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 10px 0;
     object-fit: cover;
 }
 
-/* Стили для футера */
+/* Галерея достижений */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gallery img {
+    max-height: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+.gallery figure {
+    margin: 0;
+    text-align: center;
+}
+
+.gallery figcaption {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Навыки: прогресс-бары */
+.skills li {
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.progress {
+    background-color: #eee;
+    border-radius: 4px;
+    height: 8px;
+    margin-top: 4px;
+    overflow: hidden;
+}
+
+.bar {
+    height: 8px;
+    background-color: #996900;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+/* Форма обратной связи */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: #996900;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #d2bf13;
+    color: black;
+}
+
+/* Footer */
 footer {
     font-size: 14px;
     color: #888;
     margin-top: 20px;
-    margin-bottom: 20px;
 }
 
-/* Стили для общей структуры */
-section {
-    margin-top: 20px;
-    margin-bottom: 20px;
+/* Адаптивность */
+@media (max-width: 400px) {
+    .card {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
 }
